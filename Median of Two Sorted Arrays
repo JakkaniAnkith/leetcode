@@ -1,0 +1,13 @@
+n=nums1+nums2
+n.sort()
+a=len(n)//2
+b=a+1
+if(len(n)%2!=0):
+    a=len(n)//2
+    b=a+1
+    c=n[len(n)//2]
+else:
+    a=(len(n)//2)-1
+    b=len(n)//2
+    c=(n[a]+n[b])/2
+return c
