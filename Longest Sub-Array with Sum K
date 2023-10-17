@@ -1,0 +1,17 @@
+class Solution:
+    def lenOfLongSubarr (self, arr, n, k) : 
+        #Complete the function
+        i=0
+        j=0
+        sum=arr[0]
+        maxlen=0
+        while(j<=n):
+            while(i<=j and sum>k):
+                sum-=arr[i]
+                i+=1
+            if(sum==k):
+                maxlen=max(maxlen,j-i+1)
+            j+=1
+            if(j<n):
+                sum+=arr[j]
+        return maxlen
