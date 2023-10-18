@@ -1,0 +1,12 @@
+class Solution:
+    def minStartValue(self, nums: List[int]) -> int:
+        min1=0
+        sum1=[0]*len(nums)
+        sum1[0]=nums[0]
+        for i in range(0,len(nums)):
+            sum1[i]=sum1[i-1]+nums[i]
+        min1=min(sum1)
+        if(min1>=0):
+            return 1
+        else:
+            return -(min1)+1
