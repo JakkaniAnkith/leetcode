@@ -1,0 +1,11 @@
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        msf=-(2**31)-1
+        meh=0
+        for i in range(len(nums)):
+            meh+=nums[i]
+            if msf<meh:
+                msf=meh
+            if meh<0:
+                meh=0
+        return msf
